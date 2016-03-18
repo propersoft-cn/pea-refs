@@ -5,5 +5,5 @@
 |File uploader|ng-file-upload|11.2.3
 |Hotkeys|[angular-hotkeys](http://chieffancypants.github.io/angular-hotkeys/)|1.6.0
 |Icons|material-design-icons|2.1.1
-|Material design for Angular|[Angular Material](https://material.angularjs.org/latest/)|1.0.1
+|Material design for Angular|[Angular Material](https://material.angularjs.org/latest/)|[1.0.6](https://github.com/angular/material/tree/v1.0.6)|[Documentation](projects/material/1.0.6/index.html)|
 |Router|ui-router|0.2.15
