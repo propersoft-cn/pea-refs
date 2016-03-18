@@ -1,7 +1,16 @@
 <!doctype html>
 <html ng-app="docsApp" ng-controller="DocsCtrl" lang="en" ng-strict-di>
 <head>
-<base href="/projects/material/1.0.6/">
+<base href="/">
+<script type="text/javascript">
+(function() {
+  var baseUrl = '/projects/material/1.0.6/';
+  if (location.hostname === 'propersoft-cn.github.io') {
+    baseUrl = 'pea-refs' + baseUrl;
+  }
+  document.querySelector('base').href = baseUrl;
+})();  
+</script>
 <title ng-bind="'Angular Material - ' + menu.currentSection.name +
     (menu.currentSection === menu.currentPage ? '' : ' > ' + menu.currentPage.name)">
   Angular Material
