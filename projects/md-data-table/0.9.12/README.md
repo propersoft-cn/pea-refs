@@ -10,7 +10,7 @@ Specification for Material Design data tables can be found [here](http://www.goo
 * [Usage](#usage)
 * [Change Log](CHANGELOG.md)
 * [API Documentation](#api-documentation)
-* [Contributing] (#contributing)
+* [Contributing](#contributing)
 
 ## License
 
@@ -34,16 +34,17 @@ bower install angular-material-data-table --save
 
 In your `index.html` file, include the data table module and style sheet.
 
-```html
-<!-- style sheet -->
-<link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
-<!-- module -->
-<script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
-```
+
+	<!-- style sheet -->
+	<link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
+	<!-- module -->
+	<script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+
+
 
 Include the `md.data.table` module as a dependency in your application.
 
-```javascript
+```
 angular.module('myApp', ['ngMaterial', 'md.data.table']);
 ```
 
@@ -57,7 +58,7 @@ npm install angular-material-data-table --save
 
 You may use Browserify to inject this module into your application.
 
-```javascript
+```
 angular.module('myApp', [require('angular-material-data-table')]);
 ```
 
@@ -65,7 +66,7 @@ angular.module('myApp', [require('angular-material-data-table')]);
 
 **Example Controller**
 
-```javascript
+```
 
 // Assume we have a $nutrition service that provides an API for communicating with the server
 
@@ -101,46 +102,44 @@ angular.module('demoApp').controller('sampleController', ['$nutrition', '$scope'
 
 **Example Template**
 
-```html
-<md-toolbar class="md-table-toolbar md-default">
-  <div class="md-toolbar-tools">
-    <span>Nutrition</span>
-  </div>
-</md-toolbar>
+	<md-toolbar class="md-table-toolbar md-default">
+	  <div class="md-toolbar-tools">
+	    <span>Nutrition</span>
+	  </div>
+	</md-toolbar>
+	
+	<!-- exact table from live demo -->
+	<md-table-container>
+	  <table md-table md-row-select ng-model="selected" md-progress="promise">
+	    <thead md-head md-order="query.order" md-on-reorder="onReorder">
+	      <tr md-row>
+	        <th md-column md-order-by="nameToLower"><span>Dessert (100g serving)</span></th>
+	        <th md-column md-numeric md-order-by="calories.value"><span>Calories</span></th>
+	        <th md-column md-numeric>Fat (g)</th>
+	        <th md-column md-numeric>Carbs (g)</th>
+	        <th md-column md-numeric>Protein (g)</th>
+	        <th md-column md-numeric>Sodium (mg)</th>
+	        <th md-column md-numeric>Calcium (%)</th>
+	        <th md-column md-numeric>Iron (%)</th>
+	      </tr>
+	    </thead>
+	    <tbody md-body>
+	      <tr md-row md-select="dessert" md-select-id="{{dessert.name}}" md-auto-select ng-repeat="dessert in desserts.data">
+	        <td md-cell>{{dessert.name}}</td>
+	        <td md-cell>{{dessert.calories.value}}</td>
+	        <td md-cell>{{dessert.fat.value | number: 1}}</td>
+	        <td md-cell>{{dessert.carbs.value}}</td>
+	        <td md-cell>{{dessert.protein.value | number: 1}}</td>
+	        <td md-cell>{{dessert.sodium.value}}</td>
+	        <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
+	        <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</md-table-container>
+	
+	<md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="onPaginate" md-page-select></md-table-pagination>
 
-<!-- exact table from live demo -->
-<md-table-container>
-  <table md-table md-row-select ng-model="selected" md-progress="promise">
-    <thead md-head md-order="query.order" md-on-reorder="onReorder">
-      <tr md-row>
-        <th md-column md-order-by="nameToLower"><span>Dessert (100g serving)</span></th>
-        <th md-column md-numeric md-order-by="calories.value"><span>Calories</span></th>
-        <th md-column md-numeric>Fat (g)</th>
-        <th md-column md-numeric>Carbs (g)</th>
-        <th md-column md-numeric>Protein (g)</th>
-        <th md-column md-numeric>Sodium (mg)</th>
-        <th md-column md-numeric>Calcium (%)</th>
-        <th md-column md-numeric>Iron (%)</th>
-      </tr>
-    </thead>
-    <tbody md-body>
-      <tr md-row md-select="dessert" md-select-id="{{dessert.name}}" md-auto-select ng-repeat="dessert in desserts.data">
-        <td md-cell>{{dessert.name}}</td>
-        <td md-cell>{{dessert.calories.value}}</td>
-        <td md-cell>{{dessert.fat.value | number: 1}}</td>
-        <td md-cell>{{dessert.carbs.value}}</td>
-        <td md-cell>{{dessert.protein.value | number: 1}}</td>
-        <td md-cell>{{dessert.sodium.value}}</td>
-        <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
-        <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
-      </tr>
-    </tbody>
-  </table>
-</md-table-container>
-
-<md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="onPaginate" md-page-select></md-table-pagination>
-
-```
 
 ## API Documentation
 
@@ -150,10 +149,11 @@ angular.module('demoApp').controller('sampleController', ['$nutrition', '$scope'
 * [Numeric Columns](#numeric-columns)
 * [Pagination](#pagination)
 * [Row Selection](#row-selection)
-* [Table Progress] (#table-progress)
+* [Table Progress](#table-progress)
 * [Table Toolbars](#table-toolbars)
 
 > I will be camelCasing attributes in tables so they do not wrap and are easier to read but don't forget to snake-case them in your template.
+> 
 > For documentation on versions prior to 0.9.0 please reference the [legacy](https://github.com/daniel-nagy/md-data-table/tree/legacy) branch.
 
 ### Column Sorting
@@ -173,7 +173,7 @@ The variable can then be used to send a query to the server, or bound to the `or
 
 **Example Using ngRepeat**
 
-```html
+```
 <md-table-container>
   <table md-table>
     <thead md-head md-order="myOrder">
@@ -203,7 +203,7 @@ Unlike Angular Material dialogs, the preset methods will open the dialog.
 
 **Example**
 
-```javascript
+```
 $scope.editComment = function (event, dessert) {
   // if auto selection is enabled you will want to stop the event
   // from propagating and selecting the row
@@ -243,7 +243,7 @@ $scope.editComment = function (event, dessert) {
 
 #### Small Edit Dialogs
 
-```javascript
+```
 $mdEditDialog.small(options);
 ```
 
@@ -271,7 +271,7 @@ The `small` method will return a `promise` that will resolve with the controller
 
 Large edit dialogs are functionally identical to small edit dialogs but have a few additional options.
 
-```javascript
+```
 $mdEditDialog.large(options);
 ```
 | Parameter | Type   | Description |
@@ -299,7 +299,7 @@ The `large` method will return a `promise` that will resolve with the controller
 
 #### Roll Your Own
 
-```javascript
+```
 $mdEditDialog.show(options);
 ```
 
@@ -329,7 +329,7 @@ Table cells have a `md-placeholder` CSS class that you can use for placeholder t
 
 **Example: A Table Cell That Opens An Edit Dialog**
 
-```html
+```
 <td md-cell ng-click="editComment($event, dessert)" ng-class="{'md-placeholder': !dessert.comment}">
   {{dessert.comment || 'Add a comment'}}
 </td>
@@ -341,7 +341,7 @@ Table cells support inline menus. To use an inline menu, place an `md-select` el
 
 **Example**
 
-```html
+```
 <td md-cell>
   <md-select ng-model="dessert.type" placeholder="Other">
     <md-option ng-value="type" ng-repeat="type in getTypes()">{{type}}</md-option>
@@ -361,10 +361,10 @@ Numeric columns align to the right of table cells.
 
 You may use Angular's [number](https://docs.angularjs.org/api/ng/filter/number) filter on a cell to set the decimal precision.
 
-```html
-<!-- 2 decimal places -->
-<td md-cell>{{dessert.protein.value | number: 2}}</td>
-```
+
+	<!-- 2 decimal places -->
+	<td md-cell>{{dessert.protein.value | number: 2}}</td>
+
 
 > If you are using `colspan` you may need to manual correct the alignment and padding of cells. You can override the cell's style with a custom CSS class.
 
@@ -390,24 +390,24 @@ The `md-label` attribute has the following properties.
 
 **Example: Changing Pagination Label**
 
-```html
-<!-- how to change the pagination label -->
-<md-table-pagination md-label="{page: 'Página:', rowsPerPage: 'Filas por página:', of: 'de'}"></md-table-pagination>
 
-<!-- or if the label is defined on the scope -->
-<md-table-pagination md-label="{{label}}"></md-table-pagination>
-```
+	<!-- how to change the pagination label -->
+	<md-table-pagination md-label="{page: 'Página:', rowsPerPage: 'Filas por página:', of: 'de'}"></md-table-pagination>
+	
+	<!-- or if the label is defined on the scope -->
+	<md-table-pagination md-label="{{label}}"></md-table-pagination>
+
 
 I used Google translate so if the translations are wrong please fix them and make a pull request.
 
 **Example: Client Side Pagination Using ngRepeat**
 
-```html
-<tr md-row ng-repeat="item in array | orderBy: myOrder | limitTo: myLimit: (myPage - 1) * myLimit">
 
-<!-- and your pagination element will look something like... -->
-<md-table-pagination md-limit="myLimit" md-page="myPage" md-total="{{array.length}}"></md-table-pagination>
-```
+	<tr md-row ng-repeat="item in array | orderBy: myOrder | limitTo: myLimit: (myPage - 1) * myLimit">
+	
+	<!-- and your pagination element will look something like... -->
+	<md-table-pagination md-limit="myLimit" md-page="myPage" md-total="{{array.length}}"></md-table-pagination>
+
 
 **My Pagination Isn't Working?!**
 
@@ -435,13 +435,13 @@ If at anytime you want to add or remove items from the model in your controller 
 
 **Example: Row Selection From The Live Demo.**
 
-```html
+```
 <tr md-row md-select="dessert" md-select-id="{{dessert.name}}" md-auto-select ng-repeat="dessert in desserts.data">
 ```
 
 **Example: Clearing Selected Items On Pagination**
 
-```javascript
+```
 $scope.onPaginate = function () {
   $scope.selected = [];
 }
@@ -459,7 +459,7 @@ Because I spent almost an hour debugging this I thought I would share with you. 
 
 **This Will Not Work**
 
-```javascript
+```
 function () {
   $scope.deferred = $q.defer();
   // code
@@ -467,13 +467,13 @@ function () {
 }
 ```
 
-```html
-<table md-table md-progress="deferred.promise"></table>
-```
+
+	<table md-table md-progress="deferred.promise"></table>
+
 
 **This Will Work**
 
-```javascript
+```
 function () {
   var deferred = $q.defer();
   $scope.promise = deferred.promise;
@@ -482,13 +482,13 @@ function () {
 }
 ```
 
-```html
-<table md-table md-progress="promise"></table>
-```
+
+	<table md-table md-progress="promise"></table>
+
 
 In addition, if you are dealing with something that returns a promise directly and not a deferred object you don't need to worry about it.
 
-```javascript
+```
 function () {
   $scope.promise = $timeout(function () {
     // code
@@ -502,7 +502,7 @@ Tables may be embedded within cards that offer navigation and data manipulation 
 
 If you need to display information relative to a particular column in the table you may use use a `<md-foot>` element. For example, say you had a `calories.total` property that summed the total number of calories and you wanted to display that information directly beneath the Calories column.
 
-```html
+```
 <tfoot md-foot>
   <tr md-row>
     <td md-cell></td>

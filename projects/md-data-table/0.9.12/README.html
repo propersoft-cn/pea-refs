@@ -1,0 +1,1301 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<title>Material Design Data Table</title>
+
+</head>
+<body>
+<h1>Material Design Data Table</h1>
+
+<p>This module is an effort to implement Material Design data tables in <a href="https://material.angularjs.org/latest/#/">Angular Material</a>. Data tables are used to present raw data sets and usually appear in desktop enterprise applications. Data tables are particularly useful for visualizing and manipulating large data sets.</p>
+
+<p>Specification for Material Design data tables can be found <a href="http://www.google.com/design/spec/components/data-tables.html">here</a>.</p>
+
+<ul>
+<li><a href="#license">License</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="CHANGELOG.md">Change Log</a></li>
+<li><a href="#api-documentation">API Documentation</a></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+
+
+<h2>License</h2>
+
+<p>This software is provided free of charge and without restriction under the <a href="LICENSE.md">MIT License</a></p>
+
+<h2>Demo</h2>
+
+<p>A live <a href="http://danielnagy.me/md-data-table">demo</a>.</p>
+
+<p>A fork-able <a href="http://codepen.io/anon/pen/BjvLVJ?editors=1010">Codepen</a>. Please use this to reproduce any issues you may be experiencing.</p>
+
+<h2>Installation</h2>
+
+<h4>Using Bower</h4>
+
+<p>This package is installable through the Bower package manager.</p>
+
+<pre><code>bower install angular-material-data-table --save
+</code></pre>
+
+<p>In your <code>index.html</code> file, include the data table module and style sheet.</p>
+
+<pre><code>&lt;!-- style sheet --&gt;
+&lt;link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/&gt;
+&lt;!-- module --&gt;
+&lt;script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Include the <code>md.data.table</code> module as a dependency in your application.</p>
+
+<pre><code>angular.module('myApp', ['ngMaterial', 'md.data.table']);
+</code></pre>
+
+<h4>Using npm and Browserify (or JSPM)</h4>
+
+<p>In addition, this package may be installed using npm.</p>
+
+<pre><code>npm install angular-material-data-table --save
+</code></pre>
+
+<p>You may use Browserify to inject this module into your application.</p>
+
+<pre><code>angular.module('myApp', [require('angular-material-data-table')]);
+</code></pre>
+
+<h2>Usage</h2>
+
+<p><strong>Example Controller</strong></p>
+
+<pre><code>
+// Assume we have a $nutrition service that provides an API for communicating with the server
+
+angular.module('demoApp').controller('sampleController', ['$nutrition', '$scope', function ($nutrition, $scope) {
+  'use strict';
+
+  $scope.selected = [];
+
+  $scope.query = {
+    order: 'name',
+    limit: 5,
+    page: 1
+  };
+
+  function getDesserts(query) {
+    $scope.promise = $nutrition.desserts.get(query, success).$promise;
+  }
+
+  function success(desserts) {
+    $scope.desserts = desserts;
+  }
+
+  $scope.onPaginate = function (page, limit) {
+    getDesserts(angular.extend({}, $scope.query, {page: page, limit: limit}));
+  };
+
+  $scope.onReorder = function (order) {
+    getDesserts(angular.extend({}, $scope.query, {order: order}));
+  };
+
+}]);
+</code></pre>
+
+<p><strong>Example Template</strong></p>
+
+<pre><code>&lt;md-toolbar class="md-table-toolbar md-default"&gt;
+  &lt;div class="md-toolbar-tools"&gt;
+    &lt;span&gt;Nutrition&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/md-toolbar&gt;
+
+&lt;!-- exact table from live demo --&gt;
+&lt;md-table-container&gt;
+  &lt;table md-table md-row-select ng-model="selected" md-progress="promise"&gt;
+    &lt;thead md-head md-order="query.order" md-on-reorder="onReorder"&gt;
+      &lt;tr md-row&gt;
+        &lt;th md-column md-order-by="nameToLower"&gt;&lt;span&gt;Dessert (100g serving)&lt;/span&gt;&lt;/th&gt;
+        &lt;th md-column md-numeric md-order-by="calories.value"&gt;&lt;span&gt;Calories&lt;/span&gt;&lt;/th&gt;
+        &lt;th md-column md-numeric&gt;Fat (g)&lt;/th&gt;
+        &lt;th md-column md-numeric&gt;Carbs (g)&lt;/th&gt;
+        &lt;th md-column md-numeric&gt;Protein (g)&lt;/th&gt;
+        &lt;th md-column md-numeric&gt;Sodium (mg)&lt;/th&gt;
+        &lt;th md-column md-numeric&gt;Calcium (%)&lt;/th&gt;
+        &lt;th md-column md-numeric&gt;Iron (%)&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody md-body&gt;
+      &lt;tr md-row md-select="dessert" md-select-id="{{dessert.name}}" md-auto-select ng-repeat="dessert in desserts.data"&gt;
+        &lt;td md-cell&gt;{{dessert.name}}&lt;/td&gt;
+        &lt;td md-cell&gt;{{dessert.calories.value}}&lt;/td&gt;
+        &lt;td md-cell&gt;{{dessert.fat.value | number: 1}}&lt;/td&gt;
+        &lt;td md-cell&gt;{{dessert.carbs.value}}&lt;/td&gt;
+        &lt;td md-cell&gt;{{dessert.protein.value | number: 1}}&lt;/td&gt;
+        &lt;td md-cell&gt;{{dessert.sodium.value}}&lt;/td&gt;
+        &lt;td md-cell&gt;{{dessert.calcium.value}}{{dessert.calcium.unit}}&lt;/td&gt;
+        &lt;td md-cell&gt;{{dessert.iron.value}}{{dessert.iron.unit}}&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/md-table-container&gt;
+
+&lt;md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="onPaginate" md-page-select&gt;&lt;/md-table-pagination&gt;
+</code></pre>
+
+<h2>API Documentation</h2>
+
+<ul>
+<li><a href="#column-sorting">Column Sorting</a></li>
+<li><a href="#edit-dialogs">Edit Dialogs</a></li>
+<li><a href="#inline-menus">Inline Menus</a></li>
+<li><a href="#numeric-columns">Numeric Columns</a></li>
+<li><a href="#pagination">Pagination</a></li>
+<li><a href="#row-selection">Row Selection</a></li>
+<li><a href="#table-progress">Table Progress</a></li>
+<li><a href="#table-toolbars">Table Toolbars</a></li>
+</ul>
+
+
+<blockquote><p>I will be camelCasing attributes in tables so they do not wrap and are easier to read but don't forget to snake-case them in your template.</p>
+
+<p>For documentation on versions prior to 0.9.0 please reference the <a href="https://github.com/daniel-nagy/md-data-table/tree/legacy">legacy</a> branch.</p></blockquote>
+
+<h3>Column Sorting</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Attribute      </th>
+<th align="left"> Element    </th>
+<th align="left"> Type       </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>mdOrder</code>      </td>
+<td align="left"> <code>mdHead</code>   </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> A variable to bind the sort order to. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdOnReorder</code>  </td>
+<td align="left"> <code>mdHead</code>   </td>
+<td align="left"> <code>function</code> </td>
+<td align="left"> A callback function for when the order changes. The callback will receive the new order. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdOrderBy</code>    </td>
+<td align="left"> <code>mdColumn</code> </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> The value to bind to the sort order. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdDesc</code>       </td>
+<td align="left"> <code>mdColumn</code> </td>
+<td align="left"> <code>null</code>     </td>
+<td align="left"> If present, the column will sort descending first. The default is to sort ascending first. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>When the user clicks the <code>md-column</code> element, the value of the <code>md-order-by</code> attribute will be bound to the variable provided to the <code>md-order</code> attribute on the <code>md-head</code> element. If the columns are already sorted by that value, a minus sign <code>-</code> will be prepended to the value. For most query languages, this is the universal symbol to sort descending.</p>
+
+<p>The variable can then be used to send a query to the server, or bound to the <code>orderBy</code> property of an <code>ng-repeat</code> expression.</p>
+
+<blockquote><p>It is important to know that the callback expression will be executed before the next digest cycle, meaning your local scope variable will still have the old value.</p></blockquote>
+
+<p><strong>Example Using ngRepeat</strong></p>
+
+<pre><code>&lt;md-table-container&gt;
+  &lt;table md-table&gt;
+    &lt;thead md-head md-order="myOrder"&gt;
+      &lt;!-- when the user clicks this cell, the myOrder variable will get the value 'nameToLower' --&gt;
+      &lt;th md-column md-order-by="nameToLower"&gt;Dessert (100g serving)&lt;/th&gt;
+      &lt;!-- the variable myOrder will not be changed when this cell is clicked --&gt;
+      &lt;th md-column md-numeric&gt;Calories&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody md-body&gt;
+      &lt;!-- we can let ng-repeat sort the columns for us --&gt;
+      &lt;tr ng-repeat="dessert in desserts | orderBy: myOrder"&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/md-table-container&gt;
+</code></pre>
+
+<h3>Edit Dialogs</h3>
+
+<p>Tables may require basic text editing. This module includes a service for displaying edit dialogs to modify text or anything else really. The service provides presets for both small and large edit dialogs designed for manipulating text. It also has full support for creating custom dialogs so you can be as creative as you want to be.</p>
+
+<p>Unlike Angular Material dialogs, the preset methods will open the dialog.</p>
+
+<p><strong>Restrictions</strong></p>
+
+<ul>
+<li>The dialog will always receive a new isolated scope.</li>
+<li>You must provide a <code>targetEvent</code> and the event target must be a table cell.</li>
+</ul>
+
+
+<p><strong>Example</strong></p>
+
+<pre><code>$scope.editComment = function (event, dessert) {
+  // if auto selection is enabled you will want to stop the event
+  // from propagating and selecting the row
+  event.stopPropagation();
+
+  /* 
+   * messages is commented out because there is a bug currently
+   * with ngRepeat and ngMessages were the messages are always
+   * displayed even if the error property on the ngModelController
+   * is not set, I've included it anyway so you get the idea
+   */
+
+  var promise = $mdEditDialog.small({
+    // messages: {
+    //   test: 'I don\'t like tests!'
+    // },
+    modelValue: dessert.comment,
+    placeholder: 'Add a comment',
+    save: function (input) {
+      dessert.comment = input.$modelValue;
+    },
+    targetEvent: event,
+    validators: {
+      'md-maxlength': 30
+    }
+  });
+
+  promise.then(function (ctrl) {
+    var input = ctrl.getInput();
+
+    input.$viewChangeListeners.push(function () {
+      input.$setValidity('test', input.$modelValue !== 'test');
+    });
+  });
+});
+</code></pre>
+
+<h4>Small Edit Dialogs</h4>
+
+<pre><code>$mdEditDialog.small(options);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Parameter </th>
+<th align="left"> Type   </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> options   </td>
+<td align="left"> object </td>
+<td align="left"> Small preset options. </td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<thead>
+<tr>
+<th align="left"> Property              </th>
+<th align="left"> Type       </th>
+<th align="left"> Default  </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>clickOutsideToClose</code> </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>   </td>
+<td align="left"> The user can dismiss the dialog by clicking anywhere else on the page. </td>
+</tr>
+<tr>
+<td align="left"> <code>disableScroll</code>       </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>   </td>
+<td align="left"> Prevent user scroll while the dialog is open. </td>
+</tr>
+<tr>
+<td align="left"> <code>escToClose</code>          </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>   </td>
+<td align="left"> The user can dismiss the dialog by clicking the esc key. </td>
+</tr>
+<tr>
+<td align="left"> <code>focusOnOpen</code>         </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>   </td>
+<td align="left"> Will search the template for an <code>md-autofocus</code> element. </td>
+</tr>
+<tr>
+<td align="left"> <code>messages</code>            </td>
+<td align="left"> <code>object</code>   </td>
+<td align="left"> <code>null</code>   </td>
+<td align="left"> Error messages to display corresponding to errors on the <code>ngModelController</code>. </td>
+</tr>
+<tr>
+<td align="left"> <code>modelValue</code>          </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>null</code>   </td>
+<td align="left"> The initial value of the input element. </td>
+</tr>
+<tr>
+<td align="left"> <code>placeholder</code>         </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>null</code>   </td>
+<td align="left"> Placeholder text for input element. </td>
+</tr>
+<tr>
+<td align="left"> <code>save</code>                </td>
+<td align="left"> <code>function</code> </td>
+<td align="left"> <code>null</code>   </td>
+<td align="left"> A callback function for when the use clicks the save button. The callback will receive the <a href="https://docs.angularjs.org/api/ng/type/ngModel.NgModelController">ngModelController</a>. The dialog will close unless the callback returns a rejected promise. </td>
+</tr>
+<tr>
+<td align="left"> <code>targetEvent</code>         </td>
+<td align="left"> <code>event</code>    </td>
+<td align="left"> <code>null</code>   </td>
+<td align="left"> The event object. This must be provided and it must be from a table cell. </td>
+</tr>
+<tr>
+<td align="left"> <code>type</code>                </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>"text"</code> </td>
+<td align="left"> The value of the <code>type</code> attribute on the <code>input</code> element. </td>
+</tr>
+<tr>
+<td align="left"> <code>validators</code>          </td>
+<td align="left"> <code>object</code>   </td>
+<td align="left"> <code>null</code>   </td>
+<td align="left"> Optional attributes to be placed on the input element. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The <code>small</code> method will return a <code>promise</code> that will resolve with the controller instance. The controller has two public methods, <code>dismiss</code> which will close the dialog without saving and <code>getInput</code> which will return the <code>ngModelController</code>.</p>
+
+<h4>Large Edit Dialogs</h4>
+
+<p>Large edit dialogs are functionally identical to small edit dialogs but have a few additional options.</p>
+
+<pre><code>$mdEditDialog.large(options);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Parameter </th>
+<th align="left"> Type   </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> options   </td>
+<td align="left"> object </td>
+<td align="left"> Large preset options. </td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<thead>
+<tr>
+<th align="left"> Property              </th>
+<th align="left"> Type       </th>
+<th align="left"> Default    </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>cancel</code>              </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>"Cancel"</code> </td>
+<td align="left"> Text to dismiss the dialog without saving. </td>
+</tr>
+<tr>
+<td align="left"> <code>clickOutsideToClose</code> </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>     </td>
+<td align="left"> The user can dismiss the dialog by clicking anywhere else on the page. </td>
+</tr>
+<tr>
+<td align="left"> <code>disableScroll</code>       </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>     </td>
+<td align="left"> Prevent user scroll while the dialog is open. </td>
+</tr>
+<tr>
+<td align="left"> <code>escToClose</code>          </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>     </td>
+<td align="left"> The user can dismiss the dialog by clicking the esc key. </td>
+</tr>
+<tr>
+<td align="left"> <code>focusOnOpen</code>         </td>
+<td align="left"> <code>bool</code>     </td>
+<td align="left"> <code>true</code>     </td>
+<td align="left"> Will search the template for an <code>md-autofocus</code> element. </td>
+</tr>
+<tr>
+<td align="left"> <code>messages</code>            </td>
+<td align="left"> <code>object</code>   </td>
+<td align="left"> <code>null</code>     </td>
+<td align="left"> Error messages to display corresponding to errors on the <code>ngModelController</code>. </td>
+</tr>
+<tr>
+<td align="left"> <code>modelValue</code>          </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>null</code>     </td>
+<td align="left"> The initial value of the input element. </td>
+</tr>
+<tr>
+<td align="left"> <code>ok</code>                  </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>"Save"</code>   </td>
+<td align="left"> Text to submit and dismiss the dialog. </td>
+</tr>
+<tr>
+<td align="left"> <code>placeholder</code>         </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>null</code>     </td>
+<td align="left"> Placeholder text for input element. </td>
+</tr>
+<tr>
+<td align="left"> <code>save</code>                </td>
+<td align="left"> <code>function</code> </td>
+<td align="left"> <code>null</code>     </td>
+<td align="left"> A callback function for when the use clicks the save button. The callback will receive the <code>ngModelController</code>. The dialog will close unless the callback returns a rejected promise. </td>
+</tr>
+<tr>
+<td align="left"> <code>targetEvent</code>         </td>
+<td align="left"> <code>event</code>    </td>
+<td align="left"> <code>null</code>     </td>
+<td align="left"> The event object. This must be provided and it must be from a table cell. </td>
+</tr>
+<tr>
+<td align="left"> <code>title</code>               </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>"Edit"</code>   </td>
+<td align="left"> Dialog title text. </td>
+</tr>
+<tr>
+<td align="left"> <code>type</code>                </td>
+<td align="left"> <code>string</code>   </td>
+<td align="left"> <code>"text"</code>   </td>
+<td align="left"> The value of the <code>type</code> attribute on the <code>input</code> element. </td>
+</tr>
+<tr>
+<td align="left"> <code>validators</code>          </td>
+<td align="left"> <code>object</code>   </td>
+<td align="left"> <code>null</code>     </td>
+<td align="left"> Optional attributes to be placed on the input element. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The <code>large</code> method will return a <code>promise</code> that will resolve with the controller instance. The controller has two public methods, <code>dismiss</code> which will close the dialog without saving and <code>getInput</code> which will return the <code>ngModelController</code>.</p>
+
+<h4>Roll Your Own</h4>
+
+<pre><code>$mdEditDialog.show(options);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Parameter </th>
+<th align="left"> Type   </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> options   </td>
+<td align="left"> object </td>
+<td align="left"> Dialog options. </td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<thead>
+<tr>
+<th align="left"> Property              </th>
+<th align="left"> Type              </th>
+<th align="left"> Default </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>bindToController</code>    </td>
+<td align="left"> <code>bool</code>            </td>
+<td align="left"> <code>false</code> </td>
+<td align="left"> If true, properties on the provided scope object will be bound to the controller </td>
+</tr>
+<tr>
+<td align="left"> <code>clickOutsideToClose</code> </td>
+<td align="left"> <code>bool</code>            </td>
+<td align="left"> <code>true</code>  </td>
+<td align="left"> The user can dismiss the dialog by clicking anywhere else on the page. </td>
+</tr>
+<tr>
+<td align="left"> <code>controller</code>          </td>
+<td align="left"> `function</td>
+<td align="left">string` </td>
+<td align="left"> <code>null</code>  | Either a constructor function or a string register with the $controller service. The controller will be automatically injected with <code>$scope</code> and <code>$element</code>. Remember to annotate your controller if you will be minifying your code. </td>
+</tr>
+<tr>
+<td align="left"> <code>controllerAs</code>        </td>
+<td align="left"> <code>string</code>          </td>
+<td align="left"> <code>null</code>  </td>
+<td align="left"> An alias to publish your controller on the scope. </td>
+</tr>
+<tr>
+<td align="left"> <code>disableScroll</code>       </td>
+<td align="left"> <code>bool</code>            </td>
+<td align="left"> <code>true</code>  </td>
+<td align="left"> Prevent user scroll while the dialog is open. </td>
+</tr>
+<tr>
+<td align="left"> <code>escToClose</code>          </td>
+<td align="left"> <code>bool</code>            </td>
+<td align="left"> <code>true</code>  </td>
+<td align="left"> The user can dismiss the dialog by clicking the esc key. </td>
+</tr>
+<tr>
+<td align="left"> <code>focusOnOpen</code>         </td>
+<td align="left"> <code>bool</code>            </td>
+<td align="left"> <code>true</code>  </td>
+<td align="left"> Will search the template for an <code>md-autofocus</code> element. </td>
+</tr>
+<tr>
+<td align="left"> <code>locals</code>              </td>
+<td align="left"> <code>object</code>          </td>
+<td align="left"> <code>null</code>  </td>
+<td align="left"> Optional dependancies to be injected into your controller. It is not necessary to inject registered services, the <code>$injector</code> will provide them for you. </td>
+</tr>
+<tr>
+<td align="left"> <code>resolve</code>             </td>
+<td align="left"> <code>object</code>          </td>
+<td align="left"> <code>null</code>  </td>
+<td align="left"> Similar to locals but waits for promises to be resolved. Once the promises resolve, their return value will be injected into the controller and the dialog will open. </td>
+</tr>
+<tr>
+<td align="left"> <code>scope</code>               </td>
+<td align="left"> <code>object</code>          </td>
+<td align="left"> <code>null</code>  </td>
+<td align="left"> Properties to bind to the new isolated scope. </td>
+</tr>
+<tr>
+<td align="left"> <code>targetEvent</code>         </td>
+<td align="left"> <code>event</code>           </td>
+<td align="left"> <code>null</code>  </td>
+<td align="left"> The event object. This must be provided and it must be from a table cell. </td>
+</tr>
+<tr>
+<td align="left"> <code>template</code>            </td>
+<td align="left"> <code>string</code>          </td>
+<td align="left"> <code>null</code>  </td>
+<td align="left"> The template for your dialog. </td>
+</tr>
+<tr>
+<td align="left"> <code>templateUrl</code>         </td>
+<td align="left"> <code>string</code>          </td>
+<td align="left"> <code>null</code>  </td>
+<td align="left"> A URL to fetch your template from. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The <code>show</code> method will return a <code>promise</code> that will resolve with the controller instance.</p>
+
+<p>Table cells have a <code>md-placeholder</code> CSS class that you can use for placeholder text.</p>
+
+<p><strong>Example: A Table Cell That Opens An Edit Dialog</strong></p>
+
+<pre><code>&lt;td md-cell ng-click="editComment($event, dessert)" ng-class="{'md-placeholder': !dessert.comment}"&gt;
+  {{dessert.comment || 'Add a comment'}}
+&lt;/td&gt;
+</code></pre>
+
+<h3>Inline Menus</h3>
+
+<p>Table cells support inline menus. To use an inline menu, place an <code>md-select</code> element inside an <code>md-cell</code> element.</p>
+
+<p><strong>Example</strong></p>
+
+<pre><code>&lt;td md-cell&gt;
+  &lt;md-select ng-model="dessert.type" placeholder="Other"&gt;
+    &lt;md-option ng-value="type" ng-repeat="type in getTypes()"&gt;{{type}}&lt;/md-option&gt;
+  &lt;/md-select&gt;
+&lt;/td&gt;
+</code></pre>
+
+<p>Clicking anywhere in the cell will activate the menu. In addition, if you have automatic row selection enabled the row will not be selected when the cell is clicked.</p>
+
+<h3>Numeric Columns</h3>
+
+<p>Numeric columns align to the right of table cells.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Attribute   </th>
+<th align="left"> Element    </th>
+<th align="left"> Type              </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>mdNumeric</code> </td>
+<td align="left"> <code>mdColumn</code> </td>
+<td align="left"> `null</td>
+<td align="left">expression<code>| If the expression is</code>null<code>or evaluates to</code>true` then all the cells in that column will be right aligned </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>You may use Angular's <a href="https://docs.angularjs.org/api/ng/filter/number">number</a> filter on a cell to set the decimal precision.</p>
+
+<pre><code>&lt;!-- 2 decimal places --&gt;
+&lt;td md-cell&gt;{{dessert.protein.value | number: 2}}&lt;/td&gt;
+</code></pre>
+
+<blockquote><p>If you are using <code>colspan</code> you may need to manual correct the alignment and padding of cells. You can override the cell's style with a custom CSS class.</p></blockquote>
+
+<h3>Pagination</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Attribute           </th>
+<th align="left"> Type            </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>mdBoundaryLinks</code> </td>
+<td align="left"> `null</td>
+<td align="left">expression` | Displays first and last page navigation links </td>
+</tr>
+<tr>
+<td align="left"> <code>mdLabel</code>         </td>
+<td align="left"> <code>object</code>          </td>
+<td align="left"> Change the pagination label. See more below. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdLimit</code>         </td>
+<td align="left"> <code>integer</code>         </td>
+<td align="left"> A row limit. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdPage</code>          </td>
+<td align="left"> <code>integer</code>         </td>
+<td align="left"> Page number. Pages are not zero indexed. The directive assumes the first page is one. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdOnPaginate</code>    </td>
+<td align="left"> <code>function</code>        </td>
+<td align="left"> A callback function for when the page or limit changes. The page is passed as the first argument and the limit is passed as the second argument. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdOptions</code>       </td>
+<td align="left"> <code>array</code>           </td>
+<td align="left"> Row limit options. The default is <code>[5, 10, 15]</code> </td>
+</tr>
+<tr>
+<td align="left"> <code>mdTotal</code>         </td>
+<td align="left"> <code>integer</code>         </td>
+<td align="left"> Total number of items. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The <code>md-label</code> attribute has the following properties.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Property    </th>
+<th align="left"> Type     </th>
+<th align="left"> Default </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> page        </td>
+<td align="left"> <code>string</code> </td>
+<td align="left"> Page:   </td>
+</tr>
+<tr>
+<td align="left"> rowsPerPage </td>
+<td align="left"> <code>string</code> </td>
+<td align="left"> Rows per page: </td>
+</tr>
+<tr>
+<td align="left"> of          </td>
+<td align="left"> <code>string</code> </td>
+<td align="left"> of e.g. (x - y of z) </td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>Example: Changing Pagination Label</strong></p>
+
+<pre><code>&lt;!-- how to change the pagination label --&gt;
+&lt;md-table-pagination md-label="{page: 'Página:', rowsPerPage: 'Filas por página:', of: 'de'}"&gt;&lt;/md-table-pagination&gt;
+
+&lt;!-- or if the label is defined on the scope --&gt;
+&lt;md-table-pagination md-label="{{label}}"&gt;&lt;/md-table-pagination&gt;
+</code></pre>
+
+<p>I used Google translate so if the translations are wrong please fix them and make a pull request.</p>
+
+<p><strong>Example: Client Side Pagination Using ngRepeat</strong></p>
+
+<pre><code>&lt;tr md-row ng-repeat="item in array | orderBy: myOrder | limitTo: myLimit: (myPage - 1) * myLimit"&gt;
+
+&lt;!-- and your pagination element will look something like... --&gt;
+&lt;md-table-pagination md-limit="myLimit" md-page="myPage" md-total="{{array.length}}"&gt;&lt;/md-table-pagination&gt;
+</code></pre>
+
+<p><strong>My Pagination Isn't Working?!</strong></p>
+
+<ul>
+<li>Make sure you pass <code>md-page</code>, <code>md-limit</code>, and <code>md-total</code> to the directive and that they are finite numbers.</li>
+<li>Pages are not zero indexed. The directive will assume pages start at one. If your query language expects pages to be zero indexed then just subtract one before making the query.</li>
+</ul>
+
+
+<blockquote><p>It is important to know that the call back expression will be executed before the next digest cycle, meaning your local scope variables will still have the old values.</p></blockquote>
+
+<h3>Row Selection</h3>
+
+<p>By default, selected items will persist even on pagination change. For this to work with items being fetch from the server you will need to provide a unique identifier to the directive, probably the primary key of your data set.</p>
+
+<p>If at anytime you want to add or remove items from the model in your controller you may do so.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Attribute      </th>
+<th align="left"> Element   </th>
+<th align="left"> Type              </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>mdRowSelect</code>  </td>
+<td align="left"> <code>mdTable</code> </td>
+<td align="left"> `null</td>
+<td align="left">expression` | Enable row selection. </td>
+</tr>
+<tr>
+<td align="left"> <code>ngModel</code>      </td>
+<td align="left"> <code>mdTable</code> </td>
+<td align="left"> <code>array</code>           </td>
+<td align="left"> A variable to bind selected items to. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdSelect</code>     </td>
+<td align="left"> <code>mdRow</code>   </td>
+<td align="left"> <code>any</code>             </td>
+<td align="left"> The item to be selected. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdSelectId</code>   </td>
+<td align="left"> <code>mdRow</code>   </td>
+<td align="left"> <code>string</code>          </td>
+<td align="left"> A unique identifier for the selected item. This is necessary to match items that may not be strictly equal. For example, if items are swapped from the server. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdAutoSelect</code> </td>
+<td align="left"> <code>mdRow</code>   </td>
+<td align="left"> `null</td>
+<td align="left">expression` | Select a row by clicking anywhere in the row. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdOnSelect</code>   </td>
+<td align="left"> <code>mdRow</code>   </td>
+<td align="left"> <code>function</code>        </td>
+<td align="left"> A callback function for when an item is selected. The item will be passed as an argument to the callback. </td>
+</tr>
+<tr>
+<td align="left"> <code>mdOnDeselect</code> </td>
+<td align="left"> <code>mdRow</code>   </td>
+<td align="left"> <code>function</code>        </td>
+<td align="left"> A callback function for when an item is deselected. The item will be passed as an argument to the callback. </td>
+</tr>
+<tr>
+<td align="left"> <code>ngDisabled</code>   </td>
+<td align="left"> <code>mdRow</code>   </td>
+<td align="left"> <code>expression</code>      </td>
+<td align="left"> Conditionally disable row selection. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>Example: Row Selection From The Live Demo.</strong></p>
+
+<pre><code>&lt;tr md-row md-select="dessert" md-select-id="{{dessert.name}}" md-auto-select ng-repeat="dessert in desserts.data"&gt;
+</code></pre>
+
+<p><strong>Example: Clearing Selected Items On Pagination</strong></p>
+
+<pre><code>$scope.onPaginate = function () {
+  $scope.selected = [];
+}
+</code></pre>
+
+<h3>Table Progress</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left"> Attribute    </th>
+<th align="left"> Target    </th>
+<th align="left"> Type                 </th>
+<th align="left"> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"> <code>mdProgress</code> </td>
+<td align="left"> <code>mdTable</code> </td>
+<td align="left"> `promise</td>
+<td align="left">[promises]` | The table will display a loading indicator until the promise is resolved or rejected. </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The table module can display a loading indicator for you whenever asynchronous code is executing. It accepts a promise or an array of promises. If another promise is received before the previous promise is resolved or rejected it will be placed in a queue.</p>
+
+<p>Because I spent almost an hour debugging this I thought I would share with you. I'm not sure why this is the case but if you put the deferred object on the scope and try to pass the promise to the directive from that, the queue mechanism will not work properly.</p>
+
+<p><strong>This Will Not Work</strong></p>
+
+<pre><code>function () {
+  $scope.deferred = $q.defer();
+  // code
+  $scope.deferred.resolve();
+}
+</code></pre>
+
+<pre><code>&lt;table md-table md-progress="deferred.promise"&gt;&lt;/table&gt;
+</code></pre>
+
+<p><strong>This Will Work</strong></p>
+
+<pre><code>function () {
+  var deferred = $q.defer();
+  $scope.promise = deferred.promise;
+  // code
+  deferred.resolve();
+}
+</code></pre>
+
+<pre><code>&lt;table md-table md-progress="promise"&gt;&lt;/table&gt;
+</code></pre>
+
+<p>In addition, if you are dealing with something that returns a promise directly and not a deferred object you don't need to worry about it.</p>
+
+<pre><code>function () {
+  $scope.promise = $timeout(function () {
+    // code
+  }, 2000);
+}
+</code></pre>
+
+<h3>Table Toolbars</h3>
+
+<p>Tables may be embedded within cards that offer navigation and data manipulation tools available at the top and bottom. You can use the <code>md-table-toolbar</code> and <code>md-default</code> class on a <code>md-toolbar</code> element for a plain white toolbar.</p>
+
+<p>If you need to display information relative to a particular column in the table you may use use a <code>&lt;md-foot&gt;</code> element. For example, say you had a <code>calories.total</code> property that summed the total number of calories and you wanted to display that information directly beneath the Calories column.</p>
+
+<pre><code>&lt;tfoot md-foot&gt;
+  &lt;tr md-row&gt;
+    &lt;td md-cell&gt;&lt;/td&gt;
+    &lt;td md-cell&gt;&lt;strong&gt;Total: &lt;/strong&gt;{{calories.total}}&lt;/td&gt;
+    &lt;td md-cell colspan="6"&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tfoot&gt;
+</code></pre>
+
+<p>Observe that Calories is the second column in the table. Therefore, we need to offset the first column with an empty cell. If you need to offset many columns you can use <code>&lt;td colspan="${n}"&gt;&lt;/td&gt;</code> where <code>n</code> is the number of columns to offset.</p>
+
+<blockquote><p>You may need to manually correct the the text alignment and cell padding if you use <code>colspan</code>.</p></blockquote>
+
+<h2>Contributing</h2>
+
+<p><strong>Requires</strong></p>
+
+<ul>
+<li>node</li>
+<li>grunt-cli</li>
+</ul>
+
+
+<p>This repository contains a demo application for developing features. As you make changes the application will live reload itself.</p>
+
+<p><strong>Update</strong></p>
+
+<p>I noticed the nutrition app was an inconvenience for people trying to run the app locally and contribute. I have updated the demo application to remove the dependency for the nutrition app. This is also a good example of how you can take advantage of <code>ngRepeat</code> to easily achieve client side sorting and pagination.</p>
+
+<h5>Running the App Locally</h5>
+
+<p>Clone this repository to your local machine.</p>
+
+<pre><code>git clone https://github.com/daniel-nagy/md-data-table.git
+cd md-data-table
+</code></pre>
+
+<p>Create a new branch for the issue you are working on.</p>
+
+<pre><code>git checkout -b my-issue
+</code></pre>
+
+<p>Install the package dependencies.</p>
+
+<pre><code>npm install
+bower install
+</code></pre>
+
+<p>Run the application and visit <code>127.0.0.1:8000</code> in the browser.</p>
+
+<pre><code>grunt
+</code></pre>
+
+<p>Make your modifications and update the build.</p>
+
+<pre><code>grunt build
+</code></pre>
+
+<p>Create a pull request!</p>
+</body>
+</html>
