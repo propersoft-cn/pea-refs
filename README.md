@@ -6,7 +6,7 @@
 |Hotkeys                    |[angular-hotkeys][ah-1]   |1.6.0           |
 |Icons                      |material-design-icons     |2.1.1           |
 |Material design for Angular|[Angular Material][am-1]  |[1.0.6][am-2]   |[Documentation][am-3]|
-|Router                     |[ui-router][uir-1]        |[0.2.18][uir-2] |[Documentation](uir-3)|
+|Router                     |[ui-router][uir-1]        |[0.2.18][uir-2] |[Documentation][uir-3]|
 
 
 [ah-1]: http://chieffancypants.github.io/angular-hotkeys/
