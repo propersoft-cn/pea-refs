@@ -8,7 +8,7 @@
 |Material Design            |[Specification][md-1]         |Mar 2016 Release|[Offline docs][md-2]<br>[Docker image][md-3]|
 |Material Design for Angular|[Angular Material][am-1]      |[1.0.6][am-2]   |[Documentation][am-3]|
 |Router                     |[ui-router][uir-1]            |[0.2.18][uir-2] |[Documentation][uir-3]|
-
+|sortable                   |[ng-sortable][ns-1]           |1.3.6           |
 
 [ah-1]: http://chieffancypants.github.io/angular-hotkeys/
 [am-1]: https://material.angularjs.org/latest/
@@ -29,3 +29,4 @@
 [uir-1]: https://angular-ui.github.io/ui-router/site/
 [uir-2]: https://github.com/angular-ui/ui-router/tree/0.2.18
 [uir-3]: projects/ui-router/0.2.18/Home.md
+[ns-1]: https://github.com/a5hik/ng-sortable
