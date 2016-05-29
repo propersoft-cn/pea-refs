@@ -6,14 +6,14 @@
 |Hotkeys                    |[angular-hotkeys][ah-1]       |1.6.0           |
 |Icons                      |[material-design-icons][mdi-1]|2.1.1           |
 |Material Design            |[Specification][md-1]         |Mar 2016 Release|[Offline docs][md-2]<br>[Docker image][md-3]|
-|Material Design for Angular|[Angular Material][am-1]      |[1.0.6][am-2]   |[Documentation][am-3]|
+|Material Design for Angular|[Angular Material][am-1]      |[1.0.9][am-2]   |[Documentation][am-3]|
 |Router                     |[ui-router][uir-1]            |[0.2.18][uir-2] |[Documentation][uir-3]|
 |sortable                   |[ng-sortable][ns-1]           |[1.3.6][ns-2]   |[Documentation][ns-3]|
 
 [ah-1]: http://chieffancypants.github.io/angular-hotkeys/
 [am-1]: https://material.angularjs.org/latest/
-[am-2]: https://github.com/angular/material/tree/v1.0.6
-[am-3]: projects/material/1.0.6/index.html
+[am-2]: https://github.com/angular/material/tree/v1.0.9
+[am-3]: projects/material/1.0.9/index.html
 [md-1]: https://www.google.com/design/spec/material-design/introduction.html
 [md-2]: http://192.168.1.182:9101/www.google.com/design/spec/material-design/introduction.html
 [md-3]: https://github.com/propersoft-cn/material-design-docs
