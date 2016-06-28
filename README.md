@@ -1,7 +1,7 @@
 |Catalog                    |Official Site                 |Source Version  |Specific Version Docs|
 |:--------------------------|:-----------------------------|:---------------|:--------------------|
 |App Framework              |[Angular.js][ng-1]            |[1.4.9][ng-2]   |[API Reference][ng-3]|
-|Data Table                 |[md-data-table][mddt-1]       |[0.9.12][mddt-2]|[API Documentation][mddt-3]<br/>[Change Log][mddt-4]|
+|Data Table                 |[md-data-table][mddt-1]       |[0.10.9][mddt-2]|[API Documentation][mddt-3]<br/>[Change Log][mddt-4]|
 |File Uploader              |[ng-file-upload][ngfu-1]      |11.2.3          |
 |Hotkeys                    |[angular-hotkeys][ah-1]       |1.6.0           |
 |Icons                      |[material-design-icons][mdi-1]|2.1.1           |
@@ -18,7 +18,7 @@
 [md-2]: http://192.168.1.182:9101/www.google.com/design/spec/material-design/introduction.html
 [md-3]: https://github.com/propersoft-cn/material-design-docs
 [mddt-1]: https://github.com/daniel-nagy/md-data-table
-[mddt-2]: https://github.com/daniel-nagy/md-data-table/tree/v0.9.12
+[mddt-2]: https://github.com/daniel-nagy/md-data-table/tree/v0.10.9
 [mddt-3]: projects/md-data-table/0.9.12/README.html#api-documentation
 [mddt-4]: projects/md-data-table/0.9.12/CHANGELOG.html
 [mdi-1]: http://google.github.io/material-design-icons/
