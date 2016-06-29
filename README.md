@@ -19,8 +19,8 @@
 [md-3]: https://github.com/propersoft-cn/material-design-docs
 [mddt-1]: https://github.com/daniel-nagy/md-data-table
 [mddt-2]: https://github.com/daniel-nagy/md-data-table/tree/v0.10.9
-[mddt-3]: projects/md-data-table/0.9.12/README.html#api-documentation
-[mddt-4]: projects/md-data-table/0.9.12/CHANGELOG.html
+[mddt-3]: projects/md-data-table/0.10.9/README.html#api-documentation
+[mddt-4]: projects/md-data-table/0.10.9/CHANGELOG.html
 [mdi-1]: http://google.github.io/material-design-icons/
 [ng-1]: https://angularjs.org/
 [ng-2]: https://github.com/angular/angular.js/tree/v1.4.9
