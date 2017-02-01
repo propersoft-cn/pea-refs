@@ -1,0 +1,8 @@
+title: Pea-refs
+description: Proper Enterprise App reference docs
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-hacker
+
+gems:
+  - jekyll-mentions
