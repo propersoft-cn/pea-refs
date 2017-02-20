@@ -4,11 +4,18 @@
 |Data Table                 |[md-data-table][mddt-1]       |[0.10.10][mddt-2]|[API Documentation][mddt-3]<br/>[Change Log][mddt-4]|
 |File Uploader              |[ng-file-upload][ngfu-1]      |12.2.13         |
 |Hotkeys                    |[angular-hotkeys][ah-1]       |1.7.0           |
-|Icons                      |[material-design-icons][mdi-1]|3.0.1           |[Icons List][mdi-2]
-|Material Design            |[Specification][md-1]         |Mar 2016 Release|[Offline docs][md-2]<br>[Docker image][md-3]|
+|Icons                      |[material-design-icons][mdi-1]|[3.0.1][mdi-2]  |[Icons List][mdi-3]
+|Material Design            |[Specification][md-1]<br>无需翻墙访问官网方式见下 |December 2016   |[Offline docs (March 2016)][md-2]<br>[Docker image (March 2016)][md-3]|
 |Material Design for Angular|[Angular Material][am-1]      |[1.1.3][am-2]   |[Documentation][am-3]|
 |Router                     |[ui-router][uir-1]            |[0.4.2][uir-2] |[Documentation][uir-3]|
 |sortable                   |[ng-sortable][ns-1]           |[1.3.7][ns-2]   |[Documentation][ns-3]|
+
+### 无需翻墙访问 Material Design 官网
+
+使用浏览器插件 [gooreplacer4chrome](https://github.com/jiacai2050/gooreplacer4chrome)，添加如下重定向规则：
+
+* `https://www.gstatic.com/feedback/api.js` => `https://alphahinex.github.io/proxy/gstatic/feedback/api.js`
+* `https://www.gstatic.com/external_hosted/picturefill/picturefill.min.js` => `https://alphahinex.github.io/proxy/gstatic/external_hosted/picturefill/picturefill.min.js`
 
 [ah-1]: http://chieffancypants.github.io/angular-hotkeys/
 [am-1]: https://material.angularjs.org/latest/
@@ -22,7 +29,8 @@
 [mddt-3]: projects/md-data-table/0.10.10/README.md
 [mddt-4]: projects/md-data-table/0.10.10/CHANGELOG.html
 [mdi-1]: http://google.github.io/material-design-icons/
-[mdi-2]: https://material.io/icons/
+[mdi-2]: https://github.com/google/material-design-icons/tree/3.0.1
+[mdi-3]: https://material.io/icons/
 [ng-1]: https://angularjs.org/
 [ng-2]: https://github.com/angular/angular.js/tree/v1.5.11
 [ng-3]: projects/angular/1.5.11/docs/index.html
