@@ -41,3 +41,27 @@
 [ns-1]: http://a5hik.github.io/ng-sortable/#/kanban
 [ns-2]: https://github.com/a5hik/ng-sortable/tree/1.3.7
 [ns-3]: projects/ng-sortable/1.3.7/README.md
+
+
+## 升级文档下载路径 ##
+- [Angular.js API](https://code.angularjs.org/1.6.1/angular-1.6.1.zip)，修改url内的版本号，将压缩包内docs路径得文件放入对应路径下
+- [md-data-table API](https://github.com/daniel-nagy/md-data-table/tree/v0.10.10)，修改url内的版本号，将README.md和CHANGELOG.md放入对应路径下
+- [Angular Material API](https://github.com/angular/material/blob/master/docs/README.md)，下载对应版本的源码，build出API文档放入对应路径下
+```
+# 修改文档的index.html
+# 添加
+<script type="text/javascript">
+  (function() {
+    var baseUrl = '/projects/material/1.1.3/';
+    if (location.hostname === 'propersoft-cn.github.io') {
+      baseUrl = '/pea-refs' + baseUrl;
+    }
+    document.querySelector('base').href = baseUrl;
+  })();
+</script>
+# 修改angular.js的路径
+<script src="../../angular/1.5.11/angular.min.js"></script>
+...
+```
+- [ui-router API](https://github.com/angular-ui/ui-router/wiki)，下载对应版本wiki文档放入对应路径下
+- [ng-sortable API](https://github.com/a5hik/ng-sortable/tree/1.3.7)，修改url内的版本号，将README.md放入对应路径下
