@@ -2,7 +2,7 @@
 |:--------------------------|:-----------------------------|:---------------|:--------------------|
 |App Framework              |[Angular.js][ng-1]            |[1.5.11][ng-2]   |[API Reference][ng-3]|
 |Data Table                 |[md-data-table][mddt-1]       |[0.10.10][mddt-2]|[API Documentation][mddt-3]<br/>[Change Log][mddt-4]|
-|File Uploader              |[ng-file-upload][ngfu-1]      |12.2.13         |
+|File Uploader              |[ng-file-upload][ngfu-1]      |[12.2.13][ngfu-2]|[Full reference][ngfu-3]|
 |Hotkeys                    |[angular-hotkeys][ah-1]       |1.7.0           |
 |Icons                      |[material-design-icons][mdi-1]|[3.0.1][mdi-2]  |[Icons List][mdi-3]
 |Material Design            |[Specification][md-1]<br>无需翻墙访问官网方式见下 |December 2016   |[Offline docs (March 2016)][md-2]<br>[Docker image (March 2016)][md-3]|
@@ -59,6 +59,8 @@
 [ng-2]: https://github.com/angular/angular.js/tree/v1.5.11
 [ng-3]: projects/angular/1.5.11/docs/index.html
 [ngfu-1]: https://angular-file-upload.appspot.com/
+[ngfu-2]: https://github.com/danialfarid/ng-file-upload/tree/12.2.13
+[ngfu-3]: projects/ng-file-upload/README.md
 [uir-1]: https://angular-ui.github.io/ui-router/site/
 [uir-2]: https://github.com/angular-ui/ui-router/tree/0.4.2
 [uir-3]: projects/ui-router/0.4.2/Home.md
