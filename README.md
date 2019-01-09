@@ -14,7 +14,9 @@
 |babel  |[babel][babel]  |[7.0][babel-7.0] |[API Reference][babel-api]|
 |less  |[less][less]  |[2.7.2][less-2.7.2] |[API Reference][less-api]|
 
-[点击查看如何使用][more]
+[点击查看更多细节][more]
+
+[原框架技术栈移步这里][more-old]
 
 [react]: https://reactjs.org/
 [react-16.2]: https://5abc31d8be40f1556f06c4be--reactjs.netlify.com/
@@ -40,4 +42,4 @@
 [less]: http://lesscss.cn/
 [less-2.7.2]: https://github.com/less/less.js/releases/tag/v2.7.2
 [less-api]: http://lesscss.cn/usage/
-
+[more-old]: ./README_old.md
