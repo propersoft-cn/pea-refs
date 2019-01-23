@@ -1,18 +1,22 @@
 ### 依赖框架
+
 |Catalog                    |Official Site                 |Source Version  |Specific Version Docs|
 |:--------------------------|:-----------------------------|:---------------|:--------------------|
-|Ant Design                 |[Ant Design ][Ant-Design]      |[3.9.x][antd-3.9.x]|[API Documentation][antd-api]|
-|Ant Design Pro             |[Ant Design Pro][Ant-Design]      |[1.x][antdPro-1.x]|[API Documentation][antdPro-api]|
+|Ant Design                 |[Ant Design ][Ant-Design]     |[3.9.x][antd-3.9.x]|[API Documentation][antd-api]|
+|Ant Design Pro             |[Ant Design Pro][Ant-Design]  |[1.x][antdPro-1.x]|[API Documentation][antdPro-api]|
 
 ### 技术栈
+
 |Catalog                    |Official Site                 |Source Version  |Specific Version Docs|
 |:--------------------------|:-----------------------------|:---------------|:--------------------|
-|React              |[React.js][react]            |[16.2][react-16.2]   |[API Reference][react-API]|
+|React                      |[React.js][react]             |[16.2][react-16.2]  |[API Reference][react-API]|
 |ECMAScript6 (ES6、ES2015)  |[ECMAScript 6][ECMAScript-6]  |[6][ECMAScript-6]   |[API Reference][es6-api]|
-|dva  |[DvaJS][DvaJS]  |[2.4.1][DvaJs-2.4.1]   |[API Reference][DvaJs-api]|
-|roadhog  |[roadhog][roadhog]  |[2.4.5][roadhog-2.4.5]  |[API Reference][roadhog-api]|
-|babel  |[babel][babel]  |[7.0][babel-7.0] |[API Reference][babel-api]|
-|less  |[less][less]  |[2.7.2][less-2.7.2] |[API Reference][less-api]|
+|dva                        |[DvaJS][DvaJS]                |[2.4.1][DvaJs-2.4.1]|[API Reference][DvaJs-api]|
+|roadhog                    |[roadhog][roadhog]            |[2.4.5][roadhog-2.4.5]|[API Reference][roadhog-api]|
+|babel                      |[babel][babel]                |[7.0][babel-7.0]      |[API Reference][babel-api]|
+|less                       |[less][less]                  |[2.7.2][less-2.7.2]   |[API Reference][less-api]|
+
+[项目脚手架][cli]
 
 [点击查看更多细节][more]
 
@@ -43,3 +47,4 @@
 [less-2.7.2]: https://github.com/less/less.js/releases/tag/v2.7.2
 [less-api]: http://lesscss.cn/usage/
 [more-old]: ./README_old.md
+[cli]: https://github.com/propersoft-cn/proper-enterprise-app/blob/develop/cli/pea-cli.md
